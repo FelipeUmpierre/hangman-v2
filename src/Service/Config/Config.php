@@ -26,8 +26,6 @@ class Config
      */
     public static function getConfig($key)
     {
-        
-        
         return self::loadConfiguration()[$key];
     }
 }
