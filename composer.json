@@ -1,0 +1,23 @@
+{
+    "name": "felipeumpierre/hangman",
+    "description": "Hangman game",
+    "authors": [
+        {
+            "name": "Felipe Pieretti Umpierre",
+            "email": "fum@hellofresh.com"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "^3.1",
+        "illuminate/routing": "~5.1.16",
+        "illuminate/events": "~5.1.16"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hangman\\": "src/"
+        }
+    }
+}

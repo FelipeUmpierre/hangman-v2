@@ -1,0 +1,3 @@
+attempts: 8
+words_file: './words/list.json'
+session_prefix: 'game_'
