@@ -2,10 +2,11 @@
 
 namespace Hangman\Controller;
 
-use Hangman\Model\Game;
+use Hangman\Service\Game\Game;
 use Hangman\Service\Config\Config;
 use Hangman\Service\Game\GameStatus;
 use Hangman\Service\Word\Word;
+use Hangman\Model\Game as GameModel;
 
 abstract class Controller
 {
@@ -29,10 +30,10 @@ abstract class Controller
     }
 
     /**
-     * @param Game $game
+     * @param GameModel $game
      * @return GameStatus
      */
-    protected function buildStatus(Game $game)
+    protected function buildStatus(GameModel $game)
     {
         return new GameStatus($game);
     }
@@ -43,5 +44,10 @@ abstract class Controller
     protected function buildGame()
     {
         return new Game($this->word());
+    }
+
+    protected function buildGameModel()
+    {
+        
     }
 }

@@ -34,6 +34,19 @@ class GameController extends Controller
 
     /**
      * @param int $id
+     * @return array
+     */
+    public function save($id)
+    {
+        $game = $this->buildGame()->load($id);
+        
+        $this->buildGame()->save($game);
+
+        return $this->returnResponse($game);
+    }
+
+    /**
+     * @param int $id
      * @param string $char
      * @return array
      */
